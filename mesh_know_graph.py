@@ -20,7 +20,7 @@ from pyvis.network import Network
 
 st.set_page_config(layout="wide")
 
-path = "/home/akshaylinux/Work/PubMed-Abstracts-Graph-Visualisation/header_image_3.png"
+path = "header_image_3.png"
 
 image = Image.open(path)
 st.image(image, use_column_width=True)
@@ -178,7 +178,7 @@ if st.button('Show Graph'):
         components.html(source_code, height=1200, width=1650)    
 
 try:
-    os.remove("pubmed_mesh_graph.html")
+    os.remove("mesh_knowledge_graph.html")
 except OSError:
     pass	
 
