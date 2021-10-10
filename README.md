@@ -1,1 +1,1 @@
-# Compare-MKG
+# Compare MeSH Network Graph
