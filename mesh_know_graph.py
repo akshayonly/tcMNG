@@ -44,7 +44,7 @@ expander_bar.markdown("""
 * **Python Libraries:** streamlit, Pyvis & Biopython.
 * **Data source:** NCBI Entrez
 * **Author:** Akshay Shirsath  
-* **Single Article MeSH Graph: [Click-Here](https://mesh-graphviz.herokuapp.com/)
+* **Single Article MeSH Graph:** [Click-Here](https://mesh-graphviz.herokuapp.com/)
 """)    
 
 default_one = 'Neuroscience'
@@ -174,7 +174,8 @@ if st.button('Show Graph'):
         components.html(text, height=115)
 
         st.info('NOTE: Interact With Mouse.')
-
+        st.warning('Use - Desktop Mode if on Mobile Devices')
+        
         MKGraph.write_html("mesh_knowledge_graph.html")
 
         HtmlFile = open("mesh_knowledge_graph.html", 'r', encoding='utf-8')
