@@ -30,7 +30,7 @@ st.image(image, use_column_width=True)
 
 st.markdown(
     """
-    Compare Any Two Research (Scientific) Topics Based On MeSH Terms.
+    Visualise & Compare Any Two Research (Scientific) Topics Based On MeSH Terms.
     """)
 
 expander_bar = st.expander("Site Info")
