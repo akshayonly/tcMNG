@@ -1,6 +1,7 @@
 """
-Title: MeSH Knowledge Graph
+Title: MeSH Network Graph
 Author: Akshay Shirsath
+Logo Icon Source: flaticon.com
 """
 ############################################
 ############### Libraries ##################
@@ -20,7 +21,7 @@ from pyvis.network import Network
 
 st.set_page_config(layout="wide")
 
-path = "header_image_3.png"
+path = "logo_image.png"
 
 image = Image.open(path)
 st.image(image, use_column_width=True)
@@ -34,16 +35,19 @@ st.markdown(
 
 expander_bar = st.expander("Site Info")
 expander_bar.markdown("""
-
-* **version 0.8**
+* **What is this site?** 
+    - Medical Subject Headings (MeSH) are NLM-controlled vocabulary given to research articles for indexing and recommendation of research articles. 
+    - Given any two research (scientific) topics, this site would search relevant PubMed research articles related to both topics. 
+    - The MeSH terms from all selected research articles from both topics are then projected (visualized) as Network Graph. 
+    - The goal here is to visualize what terms are encompassed in the user-given research topics and which of them are share common terms.
+    
+* **version 0.9**
 * **Python Libraries:** streamlit, Pyvis & Biopython.
 * **Data source:** NCBI Entrez
 * **Author:** Akshay Shirsath   
-* **What is this site?** 
-    - Medical Subject Headings (MeSH) are NLM controlled vocabulary.
 """)    
 
-default_one = 'Machine Learning'
+default_one = 'Neuroscience'
 default_two = 'Computational Biology'
 
 st.subheader('Compare')
@@ -69,7 +73,7 @@ if date_min == '5 years':
 if date_min == '10 years':
     default_min = (str(present_date.year-(10))+"/"+str(present_date.month)+"/"+str(present_date.day))
 
-article_retrive = st.radio('Articles To Retrive', [3, 5, 10])
+article_retrive = st.radio('Articles To Retrive (for each topics)', [3, 5, 10])
 
 if st.button('Show Graph'):
     message_one = f"Searching PMIDs associated with Topic I ({query_one})..."
