@@ -1,5 +1,5 @@
-# Topics Comparision MeSH Network Graph (TC-MNG)
-![image](https://raw.githubusercontent.com/akshayonly/Compare-MNG/main/logo_image.png)
+# Topics Comparision MeSH Network Graph (tcMNG)
+![image](https://raw.githubusercontent.com/akshayonly/tcMNG/main/tcMNG_logo.png)
 
 - This web application Visualise & Compare Any Two Research (Scientific) Topics Based On MeSH Terms.
 - Medical Subject Headings (MeSH) are NLM-controlled vocabulary given to research articles for indexing and recommendation of research articles.
