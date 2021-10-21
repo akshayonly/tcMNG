@@ -136,35 +136,42 @@ if st.button('Show Graph'):
                 <!DOCTYPE html>
                 <html>
                 <head>
-                <style>
-                .row {
-                    display : flex;
-                    align-items : center;
-                    margin-bottom: 15px;
-                }
-                .box {
-                height: 20px;
-                width: 20px;
-                border: 1px solid white;
-                margin-right : 5px;
-                }
-                .red {
-                background-color: #5bd0f9;
-                }
-                .blue {
-                background-color: #FF94CC;
-                }
-                </style>
+                    <style>
+                    .row {
+                        display : flex;
+                        align-items : center;
+                        margin-bottom: 15px;
+                    }
+                    .box {
+                    height: 20px;
+                    width: 20px;
+                    border: 1px solid white;
+                    margin-right : 5px;
+                    }
+                    .red {
+                    background-color: #5bd0f9;
+                    }
+                    .blue {
+                    background-color: #FF94CC;
+                    }
+                    .yellow {
+                    background-color: #ffa801;
+                    }
+                    </style>
                 </head>
                 <body>
-                <div class="row">
-                <div class='box red'></div>
-                <span style="color:#f1f2f6"> $Topic1</span>
-                </div>
-                <div class="row">
-                <div class='box blue'></div>
-                <span style="color:#f1f2f6"> $Topic2</span>
-                </div>	
+                    <div class="row">
+                        <div class='box red'></div>
+                        <span style="color:#f1f2f6"> $Topic1</span>
+                    </div>
+                    <div class="row">
+                        <div class='box blue'></div>
+                        <span style="color:#f1f2f6"> $Topic2</span>
+                    </div>
+                    <div class="row">
+                        <div class='box yellow'></div>
+                        <span style="color:#f1f2f6"> $Topic3</span>
+                    </div>
                 </body>
                 </html>
                 """
@@ -172,7 +179,8 @@ if st.button('Show Graph'):
         
         text = t.substitute({
             'Topic1': query_one, 
-            'Topic2': query_two})
+            'Topic2': query_two,
+            'Topic3': 'Common MeSH Terms})
 
         components.html(text, height=115)
 
