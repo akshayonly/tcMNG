@@ -39,6 +39,31 @@ def fetch_articles(pmids, min_date='2016/01', max_date='2021/01'):
     
     return list(records)
 
+def common_mesh_terms(articles_data_one, articles_data_two):    
+    unique_terms_first = set()
+
+    for article in articles_data_one:
+        mesh_terms = article.get('MH', 'NO_MESH') 
+
+        if mesh_terms != 'NO_MESH':
+            for terms in mesh_terms:
+                temp_list = [term.replace('*', '').replace(',', '').strip() for term in terms.split('/')]
+                unique_terms_first.update(set(temp_list))
+
+    unique_terms_sec = set()
+
+    for article in articles_data_two:
+        mesh_terms = article.get('MH', 'NO_MESH') 
+
+        if mesh_terms != 'NO_MESH':
+            for terms in mesh_terms:
+                temp_list = [term.replace('*', '').replace(',', '').strip() for term in terms.split('/')]
+                unique_terms_sec.update(set(temp_list))
+
+    common_terms = (unique_terms_first & unique_terms_sec)
+
+    return common_terms
+
 def create_graph(articles_data, MKGraph, common_terms, color_type='FIRST'):
     
     if color_type == 'FIRST':
