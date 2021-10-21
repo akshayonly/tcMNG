@@ -44,7 +44,7 @@ expander_bar.markdown("""
 * **Python Libraries:** streamlit, Pyvis & Biopython.
 * **Data source:** NCBI Entrez
 * **Author:** Akshay Shirsath  
-* **Single Article MeSH Graph:** [Click-Here](https://mesh-graphviz.herokuapp.com/)
+* **Single Article MeSH Graph:** [Click-Here](https://samng.herokuapp.com/)
 """)    
 
 default_one = 'Neuroscience'
