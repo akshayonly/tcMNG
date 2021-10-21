@@ -67,9 +67,9 @@ def common_mesh_terms(articles_data_one, articles_data_two):
 def create_graph(articles_data, MKGraph, common_terms, color_type='FIRST'):
     
     if color_type == 'FIRST':
-        colors = ["#5bd0f9", '#ffd32a']
+        colors = ["#ef5777", '#ffc048']
     if color_type == 'SECOND':
-        colors = ["#FF94CC",'#ffd32a']
+        colors = ["#4bcffa",'#ffc048']
     
     for article in articles_data:
 
@@ -104,8 +104,8 @@ def create_graph(articles_data, MKGraph, common_terms, color_type='FIRST'):
             main_node = f"PMID_{article.get('PMID')}"
             primary_node = 'NO_MESH'
 
-            MKGraph.add_node(main_node, size=35, title=article.get('TI'), color='#009432')
-            MKGraph.add_node(primary_node, size=25, title='NO MESH TERMS AVAILABLE', color='#EE5A24')
+            MKGraph.add_node(main_node, size=35, title=article.get('TI'), color='#c56cf0')
+            MKGraph.add_node(primary_node, size=25, title='NO MESH TERMS AVAILABLE', color='#c56cf0')
 
             MKGraph.add_edge(main_node, primary_node)    
     

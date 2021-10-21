@@ -92,7 +92,7 @@ if st.button('Show Graph'):
         pmids_two = ",".join(results_two['IdList'])
         articles_data_two = CustomFunctions.fetch_articles(pmids_two, min_date=default_min, max_date=default_max)   
 
-    MKGraph = Network(height='700px', width='81%', bgcolor='#222222', font_color='#f1f2f6')
+    MKGraph = Network(height='700px', width='81%', bgcolor='#222222', font_color='#ecf0f1')
     
     with st.spinner(text=f"Searching Common Terms..."):
         common_terms = CustomFunctions.common_mesh_terms(articles_data_one, articles_data_two)
@@ -149,28 +149,28 @@ if st.button('Show Graph'):
                     margin-right : 5px;
                     }
                     .red {
-                    background-color: #5bd0f9;
+                    background-color: #ff4d4d;
                     }
                     .blue {
-                    background-color: #FF94CC;
+                    background-color: #17c0eb;
                     }
-                    .yellow {
-                    background-color: #ffa801;
+                    .green {
+                    background-color: #3ae374;
                     }
                     </style>
                 </head>
                 <body>
                     <div class="row">
                         <div class='box red'></div>
-                        <span style="color:#f1f2f6"> $Topic1</span>
+                        <span style="color:#ecf0f1"> $Topic1</span>
                     </div>
                     <div class="row">
                         <div class='box blue'></div>
-                        <span style="color:#f1f2f6"> $Topic2</span>
+                        <span style="color:#ecf0f1"> $Topic2</span>
                     </div>
                     <div class="row">
-                        <div class='box yellow'></div>
-                        <span style="color:#f1f2f6"> $Topic3</span>
+                        <div class='box green'></div>
+                        <span style="color:#ecf0f1"> $Topic3</span>
                     </div>
                 </body>
                 </html>
