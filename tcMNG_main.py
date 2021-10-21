@@ -180,9 +180,9 @@ if st.button('Show Graph'):
         text = t.substitute({
             'Topic1': query_one, 
             'Topic2': query_two,
-            'Topic3': 'Common MeSH Terms})
+            'Topic3': 'Common MeSH Terms'})
 
-        components.html(text, height=115)
+        components.html(text, height=120)
 
         st.info('NOTE: Interact With Mouse.')
         st.warning('Use - Desktop Mode if on Mobile Devices')
