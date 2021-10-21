@@ -39,12 +39,12 @@ def fetch_articles(pmids, min_date='2016/01', max_date='2021/01'):
     
     return list(records)
 
-def create_graph(articles_data, MKGraph, color_type='FIRST'):
+def create_graph(articles_data, MKGraph, common_terms, color_type='FIRST'):
     
     if color_type == 'FIRST':
-        color = "#5bd0f9"
+        colors = ["#5bd0f9", '#ffd32a']
     if color_type == 'SECOND':
-        color = "#FF94CC"
+        colors = ["#FF94CC",'#ffd32a']
     
     for article in articles_data:
 
@@ -53,20 +53,27 @@ def create_graph(articles_data, MKGraph, color_type='FIRST'):
         if mesh_terms != 'NO_MESH':
 
             main_node = f"PMID_{article.get('PMID')}"
-            MKGraph.add_node(main_node, size=35, title=article.get('TI'), color=color)
+            MKGraph.add_node(main_node, size=35, title=article.get('TI'), color=colors[0])
 
             for terms in mesh_terms:
                 temp_list = [term.replace('*', '').replace(',', '').strip() for term in terms.split('/')]
 
                 primary_node = temp_list[0]
                 secondary_nodes =  temp_list[1:]
-
-                MKGraph.add_node(primary_node, size=25, color=color)
+                
+                if primary_node not in common_terms:
+                    MKGraph.add_node(primary_node, size=25, color=colors[0])
+                else:
+                    MKGraph.add_node(primary_node, size=25, color=colors[1])
+                
                 MKGraph.add_edge(main_node, primary_node)
 
                 if len(secondary_nodes)>1:
                     for node in secondary_nodes:
-                        MKGraph.add_node(node, size=15, color=color)
+                        if node not in common_terms:
+                            MKGraph.add_node(node, size=15, color=colors[0])
+                        else:
+                            MKGraph.add_node(node, size=15, color=colors[1])
                         MKGraph.add_edge(primary_node, node)
         else:
             main_node = f"PMID_{article.get('PMID')}"
@@ -77,4 +84,4 @@ def create_graph(articles_data, MKGraph, color_type='FIRST'):
 
             MKGraph.add_edge(main_node, primary_node)    
     
-    return MKGraph        
+    return MKGraph
