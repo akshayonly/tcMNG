@@ -1,7 +1,11 @@
 # Two Topics Comparision MeSH Network Graph (TTC-MNG)
 ![image](https://raw.githubusercontent.com/akshayonly/Compare-MNG/main/logo_image.png)
 
-- This web application visualizes MeSH terms in a PubMed article as Network-Graph representation.
+- This web application Visualise & Compare Any Two Research (Scientific) Topics Based On MeSH Terms.
+- Medical Subject Headings (MeSH) are NLM-controlled vocabulary given to research articles for indexing and recommendation of research articles.
+- Given any two research (scientific) topics, this site would search relevant PubMed research articles related to both topics.
+- The MeSH terms from all selected research articles from both topics are then projected (visualized) as Network Graph.
+- The goal here is to visualize what terms are encompassed in the user-given research topics and which of them are share common terms.
 
 ## Objective
 Researching about a topic is a tedious process when most of the time is spent on searching articles and figuring out which one to invest further time upon to read. This is a small demonstration for visualizing a research article as a graph. 
