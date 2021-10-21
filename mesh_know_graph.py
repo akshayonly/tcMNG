@@ -1,5 +1,5 @@
 """
-Title: MeSH Network Graph
+Title: Topics Compare MeSH Network Graph (tcMNG)
 Author: Akshay Shirsath
 Logo Icon Source: flaticon.com
 """
@@ -21,7 +21,7 @@ from pyvis.network import Network
 
 st.set_page_config(layout="wide")
 
-path = "logo_image.png"
+path = "tcMNG_logo.png"
 
 image = Image.open(path)
 st.image(image, use_column_width=True)
