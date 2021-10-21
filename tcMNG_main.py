@@ -40,7 +40,7 @@ expander_bar.markdown("""
     - Given any two research (scientific) topics, this site would search relevant PubMed research articles related to both topics. 
     - The MeSH terms from all selected research articles from both topics are then projected (visualized) as Network Graph. 
     - The goal here is to visualize what terms are encompassed in the user-given research topics and which of them are share common terms.
-* **version 0.9**
+* **version 1.0**
 * **Python Libraries:** streamlit, Pyvis & Biopython.
 * **Data source:** NCBI Entrez
 * **Author:** Akshay Shirsath  
