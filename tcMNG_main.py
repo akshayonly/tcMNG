@@ -149,13 +149,13 @@ if st.button('Show Graph'):
                     margin-right : 5px;
                     }
                     .red {
-                    background-color: #ff4d4d;
+                    background-color: #ef5777;
                     }
                     .blue {
-                    background-color: #17c0eb;
+                    background-color: #4bcffa;
                     }
                     .green {
-                    background-color: #3ae374;
+                    background-color: #ffc048;
                     }
                     </style>
                 </head>
