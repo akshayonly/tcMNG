@@ -93,12 +93,15 @@ if st.button('Show Graph'):
         articles_data_two = CustomFunctions.fetch_articles(pmids_two, min_date=default_min, max_date=default_max)   
 
     MKGraph = Network(height='700px', width='81%', bgcolor='#222222', font_color='#f1f2f6')
-
+    
+    with st.spinner(text=f"Searching Common Terms..."):
+        common_terms = CustomFunctions.common_mesh_terms(articles_data_one, articles_data_two)
+        
     with st.spinner(text=f"Generating Graph for Topic I ({query_one})..."):
-        MKGraph = CustomFunctions.create_graph(articles_data_one, MKGraph, color_type='FIRST')        
+        MKGraph = CustomFunctions.create_graph(articles_data_one, MKGraph, common_terms, color_type='FIRST')        
 
     with st.spinner(text=f"Generating Graph for Topic II ({query_two})..."):
-        MKGraph = CustomFunctions.create_graph(articles_data_two, MKGraph, color_type='SECOND')          
+        MKGraph = CustomFunctions.create_graph(articles_data_two, MKGraph, common_terms, color_type='SECOND')          
 
         MKGraph.set_options("""
         var options = {
