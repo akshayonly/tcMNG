@@ -1,4 +1,4 @@
-# Two Topics Comparision MeSH Network Graph (TTC-MNG)
+# Topics Comparision MeSH Network Graph (TC-MNG)
 ![image](https://raw.githubusercontent.com/akshayonly/Compare-MNG/main/logo_image.png)
 
 - This web application Visualise & Compare Any Two Research (Scientific) Topics Based On MeSH Terms.
