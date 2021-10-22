@@ -33,9 +33,21 @@ st.markdown(
     Visualise & Compare Any Two Research (Scientific) Topics Based On MeSH Terms.
     """)
 
-expander_bar = st.expander("Site Info")
+expander_bar = st.expander("What is this site?")
 expander_bar.markdown("""
-* **What is this site?** 
+* **What is tcMNG?** 
+This web application (site) does is take two user-given topics (distinct or related), fetch PubMed articles related to these two. These individual articles have MeSH terms. This site processes them and creates a big network graph encompassing all the research article's PMIDs as the big node and their respective MeSH terms as branching sub-nodes. This is represented as a graph to show interconnections between the individual articles of one topic to another topic's articles.
+
+MeSH terms are non-relevant to actual research. They are not article-specific. I use them to demonstrate (check) whether interconnecting network between articles is possible or not. There are data mining and other techniques that I'm going to use in the later version of this tool. Instead of processing the MeSH terms of each article, I'm going to process their Abstracts. And the result would be to give such an interconnected knowledge graph of relevant terms or words from the user-given topics by processing their research article's abstracts. 
+
+The idea may seem like sci-fi but with enough resource such tool is plausible. The research process is time-consuming, a researcher has to go through many research articles. Some are insightful, some not. So to assist this process, I want to create such a tool or application, which would make this tedious process much easier. 
+
+The tool is not meant to replace the reading process, but to show the insightful connections between different articles, and then the researcher can invest his further time for reading only relevant ones.  
+""") 
+
+expander_bar = st.expander("Meta Info")
+expander_bar.markdown("""
+* **So what this site does?** 
     - Medical Subject Headings (MeSH) are NLM-controlled vocabulary given to research articles for indexing and recommendation of research articles. 
     - Given any two research (scientific) topics, this site would search relevant PubMed research articles related to both topics. 
     - The MeSH terms from all selected research articles from both topics are then projected (visualized) as Network Graph. 
