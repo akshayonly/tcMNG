@@ -59,8 +59,8 @@ expander_bar.markdown("""
 * **Single Article MeSH Graph:** [Click-Here](https://samng.herokuapp.com/)
 """)    
 
-default_one = 'Neuroscience'
-default_two = 'Computational Biology'
+default_one = 'Cancer'
+default_two = 'SARS-CoV-2'
 
 st.subheader('Compare')
 query_one = st.text_input('Topic I', default_one)
