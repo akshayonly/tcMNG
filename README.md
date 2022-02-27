@@ -9,4 +9,5 @@ This web application takes two query terms. With some parameters fetches their r
 ---
 
 - 👉🏻 [Web App](https://tcmng.herokuapp.com/)
+- 👉🏻 [Mirror](https://share.streamlit.io/akshayonly/tcmng/main/tcMNG_main.py)
 - 👉🏻 [Demo Video](https://www.youtube.com/watch?v=M7hcAhOtZSQ)
